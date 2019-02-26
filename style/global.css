@@ -1,0 +1,99 @@
+/* line 1, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_nornalize.scss */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_nornalize.scss */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 10, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_nornalize.scss */
+body, div, p, ul, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+/* line 5, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+a {
+  color: #588B8B;
+}
+/* line 8, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+a:hover {
+  color: #446c6c;
+}
+
+/* line 12, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #eee;
+}
+/* line 20, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper .mainBody {
+  background: #fff;
+  width: 75%;
+  max-width: 992px;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 20px #ddd;
+  box-shadow: 0px 10px 20px #ddd;
+}
+/* line 32, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper .globalHeader {
+  padding: 10px 0;
+}
+/* line 36, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0;
+  text-align: center;
+}
+/* line 42, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper ul li {
+  display: inline-block;
+}
+/* line 45, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper ul li + li {
+  border-left: 1px solid #ccc;
+}
+/* line 49, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper ul a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+/* line 57, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+/* line 62, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+.wrapper footer .copyRight {
+  font-size: .8rem;
+  color: #666;
+  margin-right: .5em;
+}
+
+

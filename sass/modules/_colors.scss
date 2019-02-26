@@ -1,0 +1,20 @@
+// color set
+$white: #fff;
+$lightGray: #eee;
+$lightGray-1: #ddd;
+$lightGray-2: #ccc;
+$blueGreen: #588B8B;
+$orange: #F28F3B;
+$tomato: #C8553D;
+
+// color platte
+$primaryColor: $blueGreen;
+$secondaryColor: $orange;
+
+// area colors
+$backgroundColor: $lightGray;
+$shadowColor: $lightGray-1;
+$borderColor: $lightGray-2;
+$linkColor: $primaryColor;
+$hoverLinkColor: darken($primaryColor, 10);
+$headlineColor: $primaryColor;
