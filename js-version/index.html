@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
   <link rel="stylesheet" href=".././style/global.css">
+  <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
   <div class="wrapper">
@@ -26,12 +27,42 @@
           <h1>TO.DO</h1>
         </header>
         <section class="create">
-          <h2>新增待辦事項</h2>
-          <input type="text" placeholder="例如：倒垃圾">
-          <button type="submit">新增</button>
+          <h2>待辦事項</h2>
+          <input type="text" placeholder="例如：倒垃圾" class="addInput">
+          <input type="submit" class="task__button task__edit" value="新增">
         </section>
-        <section class="notFinish"></section>
-        <section class="finished"></section>
+        <section class="notFinish">
+          <section class="tasks">
+            <div class="task">
+              <span class="task__checkbox"></span>
+              <input type="text" value="掃地" class="task__content">
+              <input class="task__button task__edit" type="button" value="修改">
+              <input type="button" class="task__button task__delete" value="刪除">
+            </div>
+            <div class="task">
+              <span class="task__checkbox"></span>
+              <input type="text" class="task__content" value="拖地">
+              <input class="task__button task__edit" type="button" value="修改">
+              <input type="button" class="task__button task__delete" value="刪除">
+            </div>
+          </section>
+        </section>
+
+        <section class="finished">
+          <h2>已完成</h2>
+          <section class="tasks">
+            <div class="task">
+              <span class="task__checkbox"></span>
+              <span type="text" class="task__content">清貓砂</span>
+              <input type="button" class="task__button task__delete" value="刪除">
+            </div>
+            <div class="task">
+              <span class="task__checkbox"></span>
+              <span type="text" class="task__content">擦桌子</span>
+              <input type="button" class="task__button task__delete" value="刪除">
+            </div>
+          </section>
+        </section>
       </article>
       <footer>
         <section class="copyRight">Copyright &copy; 2019 Askie Lin All rights reserved.</section>

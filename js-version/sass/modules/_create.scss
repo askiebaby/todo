@@ -1,0 +1,25 @@
+@import '../../../sass/modules/colors';
+
+.create {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+
+  h2 {
+    flex-basis: 100%;
+  }
+
+  .addInput {
+    border: 0;
+    border-bottom: 1px solid $lightGray-2;
+    background: #f5f5f8;
+    border-radius: 0;
+    flex-grow: 1;
+    padding: .5rem 0;
+    font-size: 1.15rem;
+
+    &:focus {
+      border-color:$primaryColor;
+    }
+  }
+}

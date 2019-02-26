@@ -18,15 +18,43 @@ body, div, p, ul, h1, h2, h3, h4 {
 }
 
 /* line 5, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+h2 {
+  margin: 20px auto 5px;
+  font-size: 1rem;
+}
+
+/* line 10, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 a {
   color: #588B8B;
 }
-/* line 8, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 13, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 a:hover {
   color: #446c6c;
 }
 
-/* line 12, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 18, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: .5rem;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 26, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+input + input {
+  margin-left: 10px;
+}
+
+/* line 30, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+input[type="button"], input[type="submit"] {
+  cursor: pointer;
+}
+
+/* line 34, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -39,11 +67,11 @@ a:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #eee;
+  background: #eef4f4;
 }
-/* line 20, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 42, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper .mainBody {
-  background: #fff;
+  background: #f5f5f8;
   width: 75%;
   max-width: 992px;
   padding: 20px;
@@ -51,32 +79,32 @@ a:hover {
   -webkit-box-shadow: 0px 10px 20px #ddd;
   box-shadow: 0px 10px 20px #ddd;
 }
-/* line 32, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 54, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper .globalHeader {
   padding: 10px 0;
 }
-/* line 36, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 58, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper ul {
   list-style-type: none;
   padding-left: 0;
   font-size: 0;
   text-align: center;
 }
-/* line 42, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 64, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper ul li {
   display: inline-block;
 }
-/* line 45, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 67, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper ul li + li {
   border-left: 1px solid #ccc;
 }
-/* line 49, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 71, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper ul a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: .8rem;
   padding: 0 1rem;
 }
-/* line 57, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 79, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,7 +117,7 @@ a:hover {
   justify-content: center;
   padding: 10px 0;
 }
-/* line 62, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
+/* line 84, ../../../../../Users/askie/Desktop/work/web/todo/sass/partials/_base.scss */
 .wrapper footer .copyRight {
   font-size: .8rem;
   color: #666;

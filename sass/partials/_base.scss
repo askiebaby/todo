@@ -2,6 +2,11 @@
 
 // global
 
+h2 {
+  margin: 20px auto 5px;
+  font-size: 1rem;
+}
+
 a {
   color: $primaryColor;
 
@@ -9,6 +14,23 @@ a {
     color: $hoverLinkColor;
   }
 }
+
+input {
+  border: 1px solid $lightGray-2;
+  border-radius: 3px;
+  padding: .5rem;
+  outline: none;
+  user-select: none;
+}
+
+input + input {
+  margin-left: 10px;
+}
+
+input[type="button"], input[type="submit"] {
+  cursor: pointer;
+}
+
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -18,7 +40,7 @@ a {
   background: $backgroundColor;
 
   .mainBody {
-    background: #fff;
+    background: $white-2;
     width: 75%;
     max-width: 992px;
     padding: 20px;
@@ -32,7 +54,7 @@ a {
   .globalHeader {
     padding: 10px 0;
   }
-  
+
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -48,7 +70,7 @@ a {
 
     a {
       text-decoration: none;
-      font-size: 1rem;
+      font-size: .8rem;
       padding: 0 1rem;
     }
   }
@@ -61,7 +83,7 @@ a {
     padding: 10px 0; 
     .copyRight {
       font-size: .8rem;
-      color: #666;
+      color: $darkGray-2;
       margin-right: .5em;
     }
   }

@@ -1,0 +1,86 @@
+@import '../../../sass/modules/colors';
+
+.tasks {
+  background: $white;
+  padding: 1rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+
+  &__checkbox {
+    border: 1px solid $lightGray-2;
+    border-radius: 7px;
+    flex-basis: 25px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  &__content {
+    flex-grow: 1;
+    border-radius: 0;
+    border-color: transparent;
+    color: $darkGray-2;
+    font-size: 1.1rem;
+
+    &:hover {
+      border-bottom-color: $lightGray-1;
+    }
+
+    &:focus {
+      border-bottom-color: $primaryColor;
+    }
+  }
+
+  &__button {
+    padding: .5rem .75rem;
+  }
+
+  &__edit {
+    color: $white;
+    background: $primaryColor;
+    border-color: $primaryColor;
+
+    &:hover {
+      background: darken($primaryColor, 5);
+      border-color: darken($primaryColor, 5);
+    }
+  }
+
+  &__delete {
+    color: $white;
+    background: $tomato;
+    border-color: $tomato;
+
+    &:hover {
+      background: darken($tomato, 5);
+      border-color: darken($tomato, 5);
+    }
+  }
+}
+
+.task + .task {
+  margin-top: 10px;
+}
+
+.finished {
+  .task__content {
+    color: $lightGray-2;
+    text-decoration: line-through;
+    cursor: pointer;
+  }
+
+  .task__checkbox {
+    position: relative;
+
+    &::after {
+      content:'V';
+      position: absolute;
+      color: $darkGray-2;
+      left: 30%;
+  
+    }
+  }
+}

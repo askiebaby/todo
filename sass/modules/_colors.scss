@@ -1,9 +1,14 @@
 // color set
 $white: #fff;
+$white-2: #f5f5f8;
 $lightGray: #eee;
 $lightGray-1: #ddd;
 $lightGray-2: #ccc;
+$darkGray-1: #999;
+$darkGray-2: #666;
+$darkGray-3: #333;
 $blueGreen: #588B8B;
+$lightBlueGreen: lighten($blueGreen, 50);
 $orange: #F28F3B;
 $tomato: #C8553D;
 
@@ -12,7 +17,7 @@ $primaryColor: $blueGreen;
 $secondaryColor: $orange;
 
 // area colors
-$backgroundColor: $lightGray;
+$backgroundColor: $lightBlueGreen;
 $shadowColor: $lightGray-1;
 $borderColor: $lightGray-2;
 $linkColor: $primaryColor;
