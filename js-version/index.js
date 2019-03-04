@@ -1,7 +1,5 @@
 (function init (){
 
-  
-
   let todo = {
     tasks: {
       notFinish: [],
@@ -72,7 +70,6 @@
         tasksContainer.innerHTML = template
         this.updateTask()
         this.deleteTask('notFinish')
-        // this.setFinishedTask()
         this.setTask('notFinish')
 
       } else if (status === 'finished'){
@@ -109,19 +106,25 @@
       })
     },
     deleteTask: function(status) {
-      let tasks = (status === 'finished') ? this.tasks.finished : this.tasks.notFinish
-      
+      // let tasks = (status === 'finished') ? this.tasks.finished : this.tasks.notFinish
       let deleteButtons = (status === 'finished') ?document.querySelectorAll('.finished .task__delete') : document.querySelectorAll('.notFinish .task__delete')
 
       if (deleteButtons.length > 0) {
         deleteButtons.forEach((button) => {
           button.addEventListener('click', function () {
-            todo.removeNotFinish(status, this)
+            // 停止氣泡事件向上傳遞
+            // 防止已完成項目中的刪除鈕吃到父層的事件ㄇㄇ
+            if (event.stopPropogation) {
+              event.stopPropogation()
+            }else{
+              event.cancelBubble = true
+            }
+            todo.removeTaskArray(status, this)
           })
         })
       }
     },
-    removeNotFinish: function (status, el) {
+    removeTaskArray: function (status, el) {
       let index = el.parentElement.dataset.index
       if(status==='finished') {
         todo.tasks.finished.splice([index], 1)
