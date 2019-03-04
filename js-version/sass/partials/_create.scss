@@ -7,6 +7,11 @@
 
   h2 {
     flex-basis: 100%;
+    .msgBox {
+      color: $tomato;
+      margin-left: 1em;
+      font-size: .9rem;
+    }
   }
 
   .addInput {

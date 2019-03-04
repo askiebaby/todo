@@ -1,8 +1,18 @@
+@import '../../../sass/modules/mediaQueries';
 @import '../../../sass/modules/colors';
 
 .tasks {
   background: $white;
   padding: 1rem;
+  text-align: center;
+  color: $primaryColor;
+  max-height: 200px;
+  overflow: auto;
+
+  @include media($tablet) {
+    padding: .5rem;
+    max-height: 150px;
+  }
 }
 
 .task {
@@ -13,6 +23,7 @@
     border: 1px solid $lightGray-2;
     border-radius: 7px;
     flex-basis: 25px;
+    flex-shrink: 0;
     height: 25px;
     margin-right: 10px;
     cursor: pointer;
@@ -22,8 +33,12 @@
     flex-grow: 1;
     border-radius: 0;
     border-color: transparent;
-    color: $darkGray-2;
+    color: $darkGray-3;
     font-size: 1.1rem;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     &:hover {
       border-bottom-color: $lightGray-1;
@@ -38,7 +53,7 @@
     padding: .5rem .75rem;
   }
 
-  &__edit {
+  &__submit {
     color: $white;
     background: $primaryColor;
     border-color: $primaryColor;
@@ -49,12 +64,24 @@
     }
   }
 
-  &__delete {
-    color: $white;
-    background: $tomato;
-    border-color: $tomato;
+  &__edit {
+    color: $primaryColor;
+    border-color: $primaryColor;
 
     &:hover {
+      color: $white;
+      background: darken($primaryColor, 5);
+      border-color: darken($primaryColor, 5);
+    }
+  }
+
+  &__delete {
+    color: $tomato;
+    border-color: $tomato;
+    background: $white;
+
+    &:hover {
+      color: $white;
       background: darken($tomato, 5);
       border-color: darken($tomato, 5);
     }
@@ -69,16 +96,17 @@
   .task__content {
     color: $lightGray-2;
     text-decoration: line-through;
-    cursor: pointer;
+    cursor: pointer;   
   }
 
   .task__checkbox {
     position: relative;
 
     &::after {
-      content:'V';
-      position: absolute;
-      color: $darkGray-2;
+      content:'\f00c';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: $primaryColor;
       left: 30%;
   
     }

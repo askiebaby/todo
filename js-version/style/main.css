@@ -1,11 +1,11 @@
-/* line 2, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_header.scss */
+/* line 2, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_header.scss */
 header h1 {
   text-align: center;
   color: #1d5555;
   padding: .25em 0;
 }
 
-/* line 3, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_create.scss */
+/* line 3, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_create.scss */
 .create {
   margin-bottom: 20px;
   display: -webkit-box;
@@ -16,12 +16,18 @@ header h1 {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-/* line 8, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_create.scss */
+/* line 8, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_create.scss */
 .create h2 {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
 }
-/* line 12, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_create.scss */
+/* line 10, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_create.scss */
+.create h2 .msgBox {
+  color: #C8553D;
+  margin-left: 1em;
+  font-size: .9rem;
+}
+/* line 17, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_create.scss */
 .create .addInput {
   border: 0;
   border-bottom: 1px solid #ccc;
@@ -33,18 +39,29 @@ header h1 {
   padding: .5rem 0;
   font-size: 1.15rem;
 }
-/* line 21, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_create.scss */
+/* line 26, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_create.scss */
 .create .addInput:focus {
   border-color: #588B8B;
 }
 
-/* line 3, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 4, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .tasks {
   background: #fff;
   padding: 1rem;
+  text-align: center;
+  color: #588B8B;
+  max-height: 200px;
+  overflow: auto;
+}
+@media all and (max-width: 768px) {
+  /* line 4, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
+  .tasks {
+    padding: .5rem;
+    max-height: 150px;
+  }
 }
 
-/* line 8, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 18, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,81 +70,101 @@ header h1 {
   -ms-flex-align: center;
   align-items: center;
 }
-/* line 12, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 22, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task__checkbox {
   border: 1px solid #ccc;
   border-radius: 7px;
   -ms-flex-preferred-size: 25px;
   flex-basis: 25px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 25px;
   margin-right: 10px;
   cursor: pointer;
 }
-/* line 21, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 32, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task__content {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 0;
   border-color: transparent;
-  color: #666;
+  color: #333;
   font-size: 1.1rem;
+  text-align: left;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-/* line 28, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 43, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task__content:hover {
   border-bottom-color: #ddd;
 }
-/* line 32, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 47, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task__content:focus {
   border-bottom-color: #588B8B;
 }
-/* line 37, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 52, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task__button {
   padding: .5rem .75rem;
 }
-/* line 41, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
-.task__edit {
+/* line 56, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
+.task__submit {
   color: #fff;
   background: #588B8B;
   border-color: #588B8B;
 }
-/* line 46, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
-.task__edit:hover {
+/* line 61, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
+.task__submit:hover {
   background: #4e7b7b;
   border-color: #4e7b7b;
 }
-/* line 52, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
-.task__delete {
-  color: #fff;
-  background: #C8553D;
-  border-color: #C8553D;
+/* line 67, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
+.task__edit {
+  color: #588B8B;
+  border-color: #588B8B;
 }
-/* line 57, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 71, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
+.task__edit:hover {
+  color: #fff;
+  background: #4e7b7b;
+  border-color: #4e7b7b;
+}
+/* line 78, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
+.task__delete {
+  color: #C8553D;
+  border-color: #C8553D;
+  background: #fff;
+}
+/* line 83, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task__delete:hover {
+  color: #fff;
   background: #b74b34;
   border-color: #b74b34;
 }
 
-/* line 64, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 91, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .task + .task {
   margin-top: 10px;
 }
 
-/* line 69, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 96, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .finished .task__content {
   color: #ccc;
   text-decoration: line-through;
   cursor: pointer;
 }
-/* line 75, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 102, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .finished .task__checkbox {
   position: relative;
 }
-/* line 78, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/modules/_task.scss */
+/* line 105, ../../../../../Users/askie/Desktop/work/web/todo/js-version/sass/partials/_task.scss */
 .finished .task__checkbox::after {
-  content: 'V';
-  position: absolute;
-  color: #666;
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #588B8B;
   left: 30%;
 }
 
