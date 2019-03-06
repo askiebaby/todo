@@ -106,14 +106,13 @@
       })
     },
     deleteTask: function(status) {
-      // let tasks = (status === 'finished') ? this.tasks.finished : this.tasks.notFinish
       let deleteButtons = (status === 'finished') ?document.querySelectorAll('.finished .task__delete') : document.querySelectorAll('.notFinish .task__delete')
 
       if (deleteButtons.length > 0) {
         deleteButtons.forEach((button) => {
           button.addEventListener('click', function () {
             // 停止氣泡事件向上傳遞
-            // 防止已完成項目中的刪除鈕吃到父層的事件ㄇㄇ
+            // 防止已完成項目中的刪除鈕吃到父層的事件
             if (event.stopPropogation) {
               event.stopPropogation()
             }else{
@@ -124,7 +123,11 @@
         })
       }
     },
+    
     removeTaskArray: function (status, el) {
+      el.removeEventListener('click', this, false)
+      el.parentElement.children[0].removeEventListener('click', this, false)
+      el.parentElement.children[1].removeEventListener('blur', this, false)
       let index = el.parentElement.dataset.index
       if(status==='finished') {
         todo.tasks.finished.splice([index], 1)

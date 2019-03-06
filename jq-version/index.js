@@ -120,6 +120,9 @@ $(document).ready( function () {
       }
     },
     removeTaskArray: function (status, el) {
+      $(this).off('click', $(this))
+      $(this).parent().off('click', $('task__checkbox'))
+      $(this).parent().off('blur', $('task__content'))
       let index = el.parentElement.dataset.index
       if(status==='finished') {
         todo.tasks.finished.splice([index], 1)
