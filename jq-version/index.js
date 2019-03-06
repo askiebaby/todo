@@ -52,7 +52,7 @@ $(document).ready( function () {
         }
 
         if (notFinish.length > 0) {
-          notFinish.forEach((val, index) => {
+          $.each( notFinish, function(index, val) {
             template += `
             <div class="task" data-index="${index}">
               <span class="task__checkbox"></span>
@@ -75,7 +75,7 @@ $(document).ready( function () {
       } else if (status === 'finished'){
 
         if (finished.length > 0) {
-          finished.forEach((val, index) => {
+          $.each( finished, (index, val) => {
             template += `
             <div class="task" data-index="${index}">
               <span class="task__checkbox"></span>
@@ -98,10 +98,8 @@ $(document).ready( function () {
     updateTask: function () {
       let notFinish = this.tasks.notFinish
       let content = $('.notFinish .task__content')
-      content.each( function (index) {
-        $(this).blur( function () {
-          notFinish.splice(index, 1, this.value)
-        })
+      content.blur( function (index) {
+        notFinish.splice(index, 1, this.value)
       })
     },
     deleteTask: function(status) {
@@ -109,17 +107,15 @@ $(document).ready( function () {
       let deleteButtons = (status === 'finished') ? $('.finished .task__delete') : $('.notFinish .task__delete')
 
       if (deleteButtons.length > 0) {
-        deleteButtons.each( function () {
-          $(this).click( function () {
-            // 停止氣泡事件向上傳遞
-            // 防止已完成項目中的刪除鈕吃到父層的事件
-            if (event.stopPropogation) {
-              event.stopPropogation()
-            }else{
-              event.cancelBubble = true
-            }
-            todo.removeTaskArray(status, this)
-          })
+        deleteButtons.click( function () {
+          // 停止氣泡事件向上傳遞
+          // 防止已完成項目中的刪除鈕吃到父層的事件
+          if (event.stopPropogation) {
+            event.stopPropogation()
+          }else{
+            event.cancelBubble = true
+          }
+          todo.removeTaskArray(status, this)
         })
       }
     },
@@ -138,20 +134,18 @@ $(document).ready( function () {
       let finished = this.tasks.finished
       let checkBoxes = (status === 'finished') ? $('.finished .task') : $('.notFinish .task__checkbox')
 
-      checkBoxes.each( function (index) {
-        $(this).click( function () {
-          if (status === 'finished') {
-            let taskName = $(this).children('.task__content').text()
-            finished.splice(index, 1)
-            notFinish.unshift(taskName)
-          } else if (status === 'notFinish') {
-            let taskName = $(this).parent().children('.task__content').val()
-            notFinish.splice(index, 1)
-            finished.unshift(taskName)
-          }
-          todo.getCurrentTask('notFinish')
-          todo.getCurrentTask('finished')
-        })
+      checkBoxes.click( function (index) {
+        if (status === 'finished') {
+          let taskName = $(this).children('.task__content').text()
+          finished.splice(index, 1)
+          notFinish.unshift(taskName)
+        } else if (status === 'notFinish') {
+          let taskName = $(this).parent().children('.task__content').val()
+          notFinish.splice(index, 1)
+          finished.unshift(taskName)
+        }
+        todo.getCurrentTask('notFinish')
+        todo.getCurrentTask('finished')
       })
     }
   }
