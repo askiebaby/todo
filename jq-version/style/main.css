@@ -1,0 +1,147 @@
+header h1 {
+  text-align: center;
+  color: #1d5555;
+  padding: .25em 0;
+}
+
+.create {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.create h2 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+.create h2 .msgBox {
+  color: #C8553D;
+  margin-left: 1em;
+  font-size: .9rem;
+}
+.create .addInput {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  background: #f5f5f8;
+  border-radius: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: .5rem 0;
+  font-size: 1.15rem;
+}
+.create .addInput:focus {
+  border-color: #588B8B;
+}
+
+.tasks {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  color: #588B8B;
+  max-height: 200px;
+  overflow: auto;
+}
+@media all and (max-width: 768px) {
+  .tasks {
+    padding: .5rem;
+    max-height: 150px;
+  }
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.task__checkbox {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  -ms-flex-preferred-size: 25px;
+  flex-basis: 25px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.task__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 0;
+  border-color: transparent;
+  color: #333;
+  font-size: 1.1rem;
+  text-align: left;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.task__content:hover {
+  border-bottom-color: #ddd;
+}
+.task__content:focus {
+  border-bottom-color: #588B8B;
+}
+.task__button {
+  padding: .5rem .75rem;
+}
+.task__submit {
+  color: #fff;
+  background: #588B8B;
+  border-color: #588B8B;
+}
+.task__submit:hover {
+  background: #4e7b7b;
+  border-color: #4e7b7b;
+}
+.task__edit {
+  color: #588B8B;
+  border-color: #588B8B;
+}
+.task__edit:hover {
+  color: #fff;
+  background: #4e7b7b;
+  border-color: #4e7b7b;
+}
+.task__delete {
+  color: #C8553D;
+  border-color: #C8553D;
+  background: #fff;
+}
+.task__delete:hover {
+  color: #fff;
+  background: #b74b34;
+  border-color: #b74b34;
+}
+
+.task + .task {
+  margin-top: 10px;
+}
+
+.finished .task__content {
+  color: #ccc;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+.finished .task__checkbox {
+  position: relative;
+}
+.finished .task__checkbox::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #588B8B;
+  left: 30%;
+}
+
+

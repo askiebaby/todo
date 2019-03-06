@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery Version</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href=".././style/global.css">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="mainBody">
+      <header class="globalHeader">
+        <nav>
+          <ul>
+            <li><a href="/jq-version/">Vanilla</a></li>
+            <li><a href="./">JQuery</a></li>
+            <li><a href="./vue/">Vue</a></li>
+          </ul>
+        </nav>
+      </header>
+      <article class="content">
+        <header>
+          <h1>TO.DO</h1>
+        </header>
+        <section class="create">
+          <h2>待辦事項<span class="msgBox"></span></h2>
+          <input type="text" placeholder="例如：倒垃圾" class="addInput" autofocus>
+          <input type="button" class="task__button task__submit" value="新增">
+        </section>
+        <section class="notFinish">
+          <section class="tasks">
+            尚未新增待辦事項
+          </section>
+        </section>
+
+        <section class="finished">
+          <h2>已完成</h2>
+          <section class="tasks">
+              尚未完成任何事項
+          </section>
+        </section>
+      </article>
+      <footer>
+        <section class="copyRight">Copyright &copy; 2019 Askie Lin All rights reserved.</section>
+        <a href="https://github.com/askiebaby/todo" target="_blank"><i class="fab fa-github"></i></a>
+      </footer>
+    </div>
+  </div>
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
