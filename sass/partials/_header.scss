@@ -1,0 +1,9 @@
+@import '../modules/colors';
+
+header {
+  h1 {
+    text-align: center;
+    color: darken($primaryColor,5);
+    padding: .25em 0;
+  }
+}

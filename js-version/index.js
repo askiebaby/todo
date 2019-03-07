@@ -106,7 +106,7 @@
       })
     },
     deleteTask: function(status) {
-      let deleteButtons = (status === 'finished') ?document.querySelectorAll('.finished .task__delete') : document.querySelectorAll('.notFinish .task__delete')
+      let deleteButtons = (status === 'finished') ? document.querySelectorAll('.finished .task__delete') : document.querySelectorAll('.notFinish .task__delete')
 
       if (deleteButtons.length > 0) {
         deleteButtons.forEach((button) => {

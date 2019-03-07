@@ -123,7 +123,7 @@ $(document).ready( function () {
       $(this).off('click', $(this))
       $(this).parent().off('click', $('task__checkbox'))
       $(this).parent().off('blur', $('task__content'))
-      let index = el.parentElement.dataset.index
+      let index = $(el).parent('[data-index]')
       if(status==='finished') {
         todo.tasks.finished.splice([index], 1)
         todo.getCurrentTask('finished')

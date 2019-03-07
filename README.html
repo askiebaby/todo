@@ -1,0 +1,66 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="my-todo-practice">My TODO Practice</h1>
+<h6 id="tags-todo-javascript-jquery-vue">tags: <code>todo</code>, <code>JavaScript</code>, <code>JQuery</code>, <code>Vue</code></h6>
+<p><img src="https://i.imgur.com/QT0gyly.png" alt=""></p>
+<hr>
+<h3 id="demo">Demo</h3>
+<p><a href="https://askiebaby.github.io/todo/js-version/">Vanilla JavaScipt</a> / <a href="https://askiebaby.github.io/todo/jq-version/">JQuery</a> / Vue (尚未實作)</p>
+<hr>
+<h3 id="project-">Project 說明</h3>
+<p>這是一個透過 <code>Vanilla JavaScipt</code> / <code>JQuery</code> / <code>Vue</code> 實作 <code>To Do List</code> 的練習。學習透過原生 <code>JavaScipt</code> 操作 <code>DOM API</code>，再比較使用 <code>Library</code> 和 <code>Framework</code> 的異同，去理解它們底層分別處理掉了什麼原生語法需要處理的麻煩事。</p>
+<hr>
+<h3 id="-">使用說明</h3>
+<ol>
+<li>輸入<strong>待辦事項</strong>後，點選<strong>新增</strong>可以將事項加入未完成的項目。</li>
+<li>並且可以針對待辦事項直接做內容的<strong>修改</strong>及<strong>刪除</strong>。</li>
+<li>做完的事項可以勾選變成 <strong>已完成項目</strong>，也能將<strong>已完成的項目</strong>的<strong>狀態</strong>改為<strong>未完成</strong>。</li>
+</ol>
+<hr>
+<h3 id="-">學習紀錄</h3>
+<h4 id="vanilla-javascipt">Vanilla JavaScipt</h4>
+<ul>
+<li>selector：<code>.querySelector()</code>, <code>.querySelectorAll()</code></li>
+<li>array maniputation：<code>.push()</code>, <code>.unshift()</code>, <code>.splice()</code>, <code>.length</code></li>
+<li>hierarchy：<code>.parentElement</code>, <code>.children[i]</code></li>
+<li>what&#39;s <code>this</code> !</li>
+<li>data：<code>.innerHTML</code>, <code>.textContent</code>, <code>value</code></li>
+<li>event handler：<code>.addEventListener()</code>, <code>.removeEventListener()</code>, <code>click</code>, <code>blur</code>, <code>focus</code></li>
+<li>三元表達式</li>
+<li><code>var</code> versus <code>let</code></li>
+<li><code>template literals</code></li>
+<li><code>ES5 function</code> versus <code>arrow function</code></li>
+<li>array loop：<code>.forEach()</code></li>
+<li>防止冒泡向上傳遞：<code>event.stopPropogation()</code></li>
+<li>防止觸發預設事件：<code>event.preventDefault()</code></li>
+<li><code>return</code></li>
+</ul>
+<h5 id="-css-input-">註記 css: input 元素不能使用偽元素！</h5>
+<h4 id="jquery">JQuery</h4>
+<pre><code class="lang-javascript=">// Vanilla
+document.addEventListener(&#39;DOMContentLoaded&#39;, function() {})
+
+// 等於 JQuery 的
+$(document).ready(function() {})
+</code></pre>
+<ul>
+<li>selector：<code>$.( )</code></li>
+<li>loop：<code>.each()</code></li>
+<li>防止冒泡向上傳遞：<code>event.stopPropogation()</code></li>
+<li>防止觸發預設事件：<code>event.preventDefault()</code></li>
+<li>getter and setter：<code>.val()</code>, <code>.empty()</code>, <code>.text()</code></li>
+<li>event handler：<code>click</code>, <code>blur</code>, <code>focus</code>, <code>on</code>, <code>off</code></li>
+<li><code>JQuery Objects</code> 才能使用 <code>JQuery Methods</code></li>
+<li>hierarchy：<code>.parent()</code>, <code>.children()</code></li>
+<li>dataset：<code>$(&#39;[data-name]&#39;)</code></li>
+<li><code>this</code> versus <code>$(this)</code></li>
+</ul>
+<h4 id="vue">Vue</h4>
+<p>尚未實作</p>
+
+      </body>
+    </html>

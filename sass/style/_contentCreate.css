@@ -1,0 +1,35 @@
+.create {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.create h2 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+.create h2 .msgBox {
+  color: #C8553D;
+  margin-left: 1em;
+  font-size: .9rem;
+}
+.create .addInput {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  background: #f5f5f8;
+  border-radius: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: .5rem 0;
+  font-size: 1.15rem;
+}
+.create .addInput:focus {
+  border-color: #588B8B;
+}
+
+

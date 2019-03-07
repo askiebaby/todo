@@ -81,11 +81,17 @@ input[type="button"], input[type="submit"] {
     a {
       text-decoration: none;
       font-size: .8rem;
-      padding: 0 1rem;
+      margin: 0 .75rem;
+      padding: .25rem;
+      &.active {
+        color: $deepOrange;
+        font-weight: 700;
+      }
     }
   }
 
   // global footer
+
   footer {
     display: flex;
     align-items: center;
