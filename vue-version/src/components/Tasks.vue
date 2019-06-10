@@ -3,6 +3,7 @@
     <header>
       <h1>TO.DO</h1>
     </header>
+    <TasksCreate></TasksCreate>
     <TasksTodo></TasksTodo>
     <TasksCompleted></TasksCompleted>
   </article>
