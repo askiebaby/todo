@@ -2,7 +2,7 @@
   <footer>
     <section class="copyRight">Copyright &copy; 2019 Askie Lin All rights reserved.</section>
     <a href="https://github.com/askiebaby/todo" target="_blank">
-      <i class="fab fa-github"></i>
+      <font-awesome :icon="['fab', 'github']"/>
     </a>
   </footer>
 </template>
@@ -23,5 +23,7 @@ footer {
 }
 </style>
 <script>
+import { dom } from "@fortawesome/fontawesome-svg-core";
+dom.watch();
 export default {};
 </script>
