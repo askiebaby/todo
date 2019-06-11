@@ -2,7 +2,7 @@
   <section class="create">
     <h2>
       待辦事項
-      <span class="msgBox"></span>
+      <span class="msgBox" ref="msgBox"></span>
     </h2>
     <input
       type="text"
@@ -52,14 +52,22 @@ export default {
   name: "TaskCreate",
   data() {
     return {
-      todoId: Date.now()
+      todoId: Date.now(),
+      isInputEmpty: ""
     };
   },
-  // mounted() {
-  //   this.$refs.addInput.addEventListener("click", this.resetInput);
-  // },
   methods: {
+    checkInputValue() {
+      this.isInputEmpty = this.$refs.addInput.value ? false : true;
+      this.$refs.msgBox.textContent = this.isInputEmpty
+        ? "你沒輸入內容...!!!!"
+        : "";
+    },
     createTodo() {
+      this.checkInputValue();
+
+      if (this.isInputEmpty) return;
+
       const todo = {
         id: this.todoId,
         todo: this.$refs.addInput.value,
