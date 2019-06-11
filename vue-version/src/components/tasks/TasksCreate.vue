@@ -68,14 +68,15 @@ export default {
 
       if (this.isInputEmpty) return;
 
+      this.todoId += 1;
+
       const todo = {
         id: this.todoId,
         todo: this.$refs.addInput.value,
         isTodoCompleted: false
       };
-
+      console.log(todo);
       this.$store.dispatch("addTodo", todo);
-      this.todoId++;
 
       this.resetInput();
     },
