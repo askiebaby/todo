@@ -4,8 +4,15 @@
       待辦事項
       <span class="msgBox"></span>
     </h2>
-    <input type="text" placeholder="例如：倒垃圾" class="addInput" autofocus>
-    <input type="button" class="task__button task__submit" value="新增">
+    <input
+      type="text"
+      placeholder="例如：倒垃圾"
+      class="addInput"
+      autofocus
+      ref="addInput"
+      @keyup.enter="createTodo"
+    >
+    <input type="submit" class="task__button task__submit" value="新增" @click="createTodo">
   </section>
 </template>
 <style lang="scss" scoped>
@@ -41,5 +48,33 @@
 }
 </style>
 <script>
-export default {};
+export default {
+  name: "TaskCreate",
+  data() {
+    return {
+      todoId: Date.now()
+    };
+  },
+  // mounted() {
+  //   this.$refs.addInput.addEventListener("click", this.resetInput);
+  // },
+  methods: {
+    createTodo() {
+      const todo = {
+        id: this.todoId,
+        todo: this.$refs.addInput.value,
+        isTodoCompleted: false
+      };
+
+      this.$store.dispatch("addTodo", todo);
+      this.todoId++;
+
+      this.resetInput();
+    },
+    resetInput() {
+      this.$refs.addInput.value = "";
+      this.$refs.addInput.focus();
+    }
+  }
+};
 </script>
