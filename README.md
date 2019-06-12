@@ -16,6 +16,8 @@
 
 ### Project 說明
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 這是一個透過 `Vanilla JavaScipt` / `JQuery` / `Vue` 實作 `To Do List` 的練習。學習透過原生 `JavaScipt` 操作 `DOM API`，再比較使用 `Library` 和 `Framework` 的異同，去理解它們底層分別處理掉了什麼原生語法需要處理的麻煩事。
 
 ---
