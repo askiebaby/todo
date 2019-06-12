@@ -54,6 +54,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0.5rem;
 
     &:hover {
       border-bottom-color: $lightGray-1;
@@ -113,6 +114,7 @@
     color: $lightGray-2;
     text-decoration: line-through;
     cursor: pointer;
+    font-weight: 500;
   }
 
   .task__checkbox {
