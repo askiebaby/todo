@@ -12,10 +12,10 @@ export default new Router({
       path: "/",
       name: "home",
       component: VueVersion,
-      redirect: "/todo/vue"
+      redirect: "/vue"
     },
     {
-      path: "/todo/vue",
+      path: "/vue",
       name: "vue",
       component: VueVersion
     }
