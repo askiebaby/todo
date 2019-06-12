@@ -1,14 +1,16 @@
-My TODO Practice
-===
+# My TODO Practice
 
 ###### tags: `todo`, `JavaScript`, `JQuery`, `Vue`
-![](https://i.imgur.com/QT0gyly.png)
 
 ---
 
 ### Demo
 
-[Vanilla JavaScipt](https://askiebaby.github.io/todo/js-version/) / [JQuery](https://askiebaby.github.io/todo/jq-version/) / Vue (尚未實作)
+[Vanilla JavaScipt](https://askiebaby.github.io/todo/js-version/) / [JQuery](https://askiebaby.github.io/todo/jq-version/) / [Vue](https://askiebaby.github.io/todo/vue-version/)
+
+---
+
+![](https://i.imgur.com/oNP1uv9.gif)
 
 ---
 
@@ -29,6 +31,7 @@ My TODO Practice
 ### 學習紀錄
 
 #### Vanilla JavaScipt
+
 - selector：`.querySelector()`, `.querySelectorAll()`
 - array maniputation：`.push()`, `.unshift()`, `.splice()`, `.length`
 - hierarchy：`.parentElement`, `.children[i]`
@@ -46,15 +49,16 @@ My TODO Practice
 
 ##### 註記 css: input 元素不能使用偽元素！
 
-
 #### JQuery
+
 ```javascript=
 // Vanilla
-document.addEventListener('DOMContentLoaded', function() {})
+document.addEventListener("DOMContentLoaded", function() {});
 
 // 等於 JQuery 的
-$(document).ready(function() {})
+$(document).ready(function() {});
 ```
+
 - selector：`$.( )`
 - loop：`.each()`
 - 防止冒泡向上傳遞：`event.stopPropogation()`
@@ -67,4 +71,14 @@ $(document).ready(function() {})
 - `this` versus `$(this)`
 
 #### Vue
-尚未實作
+
+- Vue
+  - Event handlers
+  - value passing between parent component and child component
+  - Attribute - ref
+  - Directives
+  - Config
+  - Modifiers
+- VueX
+  - state, getters, mutations, actions
+- Vue Router
