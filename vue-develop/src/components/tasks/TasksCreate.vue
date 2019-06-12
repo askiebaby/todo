@@ -75,7 +75,6 @@ export default {
         todo: this.$refs.addInput.value,
         isTodoCompleted: false
       };
-      console.log(todo);
       this.$store.dispatch("addTodo", todo);
 
       this.resetInput();

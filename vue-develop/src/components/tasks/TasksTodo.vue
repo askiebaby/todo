@@ -4,7 +4,7 @@
       <span v-if="!hasTodoNotComplete">尚未新增待辦事項</span>
       <div class="task" v-for="(todo, index) of todoNotComplete" :key="`todo-${index}`">
         <span class="task__checkbox" @click="updateTodoStatus(todo.id)"></span>
-        <input type="text" v-model="todo.todo" class="task__content" @blur="updateTodoValue(todo)">
+        <input type="text" v-model="todo.todo" class="task__content">
         <input
           type="button"
           class="task__button task__delete"
@@ -30,9 +30,6 @@ export default {
   methods: {
     updateTodoStatus(id) {
       this.$store.dispatch("updateTodoStatus", id);
-    },
-    updateTodoValue(todo) {
-      console.log("updateTodoValue", todo);
     },
     deleteTodo(id) {
       this.$store.dispatch("deleteTodo", id);

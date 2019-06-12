@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/todo/vue-version/js/chunk-vendors.3a52f26f.js"
   },
   {
-    "revision": "8e77f3ff19181baa69f5",
-    "url": "/todo/vue-version/js/app.3254617c.js"
+    "revision": "b3485fba33ca7f933e80",
+    "url": "/todo/vue-version/js/app.b5972f51.js"
   },
   {
-    "revision": "904d376eb3a8a8d0ecee76566ffe72b4",
+    "revision": "60ad1f64fa5140ad9ec756e81d15307b",
     "url": "/todo/vue-version/index.html"
   },
   {
-    "revision": "8e77f3ff19181baa69f5",
-    "url": "/todo/vue-version/css/app.5b0469d6.css"
+    "revision": "b3485fba33ca7f933e80",
+    "url": "/todo/vue-version/css/app.4f44d2e9.css"
   }
 ];

@@ -28,11 +28,6 @@ export default new Vuex.Store({
       if (completeTodo)
         completeTodo.isTodoCompleted = !completeTodo.isTodoCompleted;
     },
-    updateTodoValue(state, payload) {
-      const completeTodo = state.todos.find((todo) => todo.id === payload.id);
-      // if (completeTodo) completeTodo.todo = todo;
-      console.log(completeTodo);
-    },
     deleteTodo(state, id) {
       const remainTodos = state.todos.filter((todo) => todo.id !== id);
       state.todos = remainTodos;
@@ -44,9 +39,6 @@ export default new Vuex.Store({
     },
     updateTodoStatus({ commit }, id) {
       commit("updateTodoStatus", id);
-    },
-    updateTodoValue({ commit }, todo) {
-      commit("updateTodoValue", todo);
     },
     deleteTodo({ commit }, id) {
       commit("deleteTodo", id);
