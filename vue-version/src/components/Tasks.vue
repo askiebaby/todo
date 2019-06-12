@@ -20,6 +20,9 @@
   color: $primaryColor;
   max-height: 200px;
   overflow: auto;
+  span {
+    font-weight: 700;
+  }
 
   @include media($tablet) {
     padding: 0.5rem;
@@ -62,6 +65,7 @@
   }
 
   &__button {
+    font-weight: 700;
     padding: 0.5rem 0.75rem;
   }
 
@@ -113,14 +117,7 @@
 
   .task__checkbox {
     position: relative;
-
-    &::after {
-      content: "\f00c";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      color: $primaryColor;
-      left: 30%;
-    }
+    padding-top: 3px;
   }
 }
 </style>

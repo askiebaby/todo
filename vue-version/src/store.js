@@ -25,7 +25,8 @@ export default new Vuex.Store({
     },
     updateTodoStatus(state, id) {
       const completeTodo = state.todos.find((todo) => todo.id === id);
-      if (completeTodo) completeTodo.isTodoCompleted = true;
+      if (completeTodo)
+        completeTodo.isTodoCompleted = !completeTodo.isTodoCompleted;
     },
     updateTodoValue(state, payload) {
       const completeTodo = state.todos.find((todo) => todo.id === payload.id);

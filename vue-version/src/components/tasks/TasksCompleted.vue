@@ -3,14 +3,15 @@
     <h2>已完成</h2>
     <section class="tasks">
       <span v-if="!hasTodoComplete">尚未完成任何事項</span>
-      {{todoCompleted}}
       <div
         class="task"
         :data-index="todo.id"
         v-for="(todo, index) of todoCompleted"
         :key="`done-${index}`"
       >
-        <span class="task__checkbox"></span>
+        <span class="task__checkbox" @click="updateTodoStatus(todo.id)">
+          <font-awesome :icon="['fas', 'check']"/>
+        </span>
         <span type="text" class="task__content">{{ todo.todo }}</span>
         <input
           type="button"
@@ -35,6 +36,9 @@ export default {
     }
   },
   methods: {
+    updateTodoStatus(id) {
+      this.$store.dispatch("updateTodoStatus", id);
+    },
     deleteTodo(id) {
       this.$store.dispatch("deleteTodo", id);
     }

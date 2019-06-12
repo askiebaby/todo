@@ -2,10 +2,9 @@
   <section class="notFinish">
     <section class="tasks">
       <span v-if="!hasTodoNotComplete">尚未新增待辦事項</span>
-      {{ todoNotComplete }}
       <div class="task" v-for="(todo, index) of todoNotComplete" :key="`todo-${index}`">
         <span class="task__checkbox" @click="updateTodoStatus(todo.id)"></span>
-        <input type="text" :value="todo.todo" class="task__content" @blur="updateTodoValue(todo)">
+        <input type="text" v-model="todo.todo" class="task__content" @blur="updateTodoValue(todo)">
         <input
           type="button"
           class="task__button task__delete"
