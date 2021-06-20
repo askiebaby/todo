@@ -1,0 +1,25 @@
+#app {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+div,
+p,
+ul,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}

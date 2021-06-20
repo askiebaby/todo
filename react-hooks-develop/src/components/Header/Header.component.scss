@@ -1,0 +1,30 @@
+@import '../../assets/sass/modules/_colors.scss';
+
+.globalHeader {
+  padding: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+  li + li {
+    border-left: 1px solid $borderColor;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 0 0.75rem;
+    padding: 0.25rem;
+    &.active {
+      color: $deepOrange;
+      font-weight: 700;
+    }
+  }
+}
