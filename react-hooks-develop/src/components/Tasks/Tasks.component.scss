@@ -96,20 +96,3 @@
 .task + .task {
   margin-top: 10px;
 }
-
-.finished {
-  h2 {
-    font-weight: 500;
-  }
-  .task__content {
-    color: $lightGray-2;
-    text-decoration: line-through;
-    cursor: pointer;
-    font-weight: 500;
-  }
-
-  .task__checkbox {
-    position: relative;
-    padding-top: 3px;
-  }
-}

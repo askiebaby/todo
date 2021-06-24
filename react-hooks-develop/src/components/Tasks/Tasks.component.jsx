@@ -19,13 +19,34 @@ const Tasks = () => {
     ]);
   };
 
+  const handleUpdateTodo = (selectedTodo) => {
+    const newTodos = todos.map((todo) => {
+      return todo.id === selectedTodo.id ? selectedTodo : todo;
+    });
+
+    setTodos(newTodos);
+  };
+  const handleDeleteTodo = (selectedTodoId) => {
+    const newTodos = todos.filter((todo) => todo.id !== selectedTodoId);
+
+    setTodos(newTodos);
+  };
+
   return (
     <article className='content'>
       <header>
         <h1>TO.DO</h1>
         <CreateSection handleCreateTodo={handleCreateTodo} />
-        <TodoTasks todos={todos} />
-        <CompletedTasks />
+        <TodoTasks
+          todos={todos}
+          handleUpdateTodo={handleUpdateTodo}
+          handleDeleteTodo={handleDeleteTodo}
+        />
+        <CompletedTasks
+          todos={todos}
+          handleUpdateTodo={handleUpdateTodo}
+          handleDeleteTodo={handleDeleteTodo}
+        />
       </header>
     </article>
   );

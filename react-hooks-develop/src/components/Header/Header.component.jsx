@@ -12,11 +12,11 @@ const Header = () => {
             <a href='/todo/jq-version'>JQuery</a>
           </li>
           <li>
-            <a href='/todo/vue'>Vue</a>
+            <a href='/todo/vue-version'>Vue</a>
           </li>
           <li>
-            <a href='/todo/react' className='active'>
-              React
+            <a href='/todo/react-hooks-version' className='active'>
+              React Hooks
             </a>
           </li>
         </ul>

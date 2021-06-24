@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo/react-hooks-version/static/css/main.380c8fa9.chunk.css",
+    "main.js": "/todo/react-hooks-version/static/js/main.173009b3.chunk.js",
+    "main.js.map": "/todo/react-hooks-version/static/js/main.173009b3.chunk.js.map",
+    "runtime-main.js": "/todo/react-hooks-version/static/js/runtime-main.2f73f8a2.js",
+    "runtime-main.js.map": "/todo/react-hooks-version/static/js/runtime-main.2f73f8a2.js.map",
+    "static/js/2.bc20b9e7.chunk.js": "/todo/react-hooks-version/static/js/2.bc20b9e7.chunk.js",
+    "static/js/2.bc20b9e7.chunk.js.map": "/todo/react-hooks-version/static/js/2.bc20b9e7.chunk.js.map",
+    "static/js/3.a667f092.chunk.js": "/todo/react-hooks-version/static/js/3.a667f092.chunk.js",
+    "static/js/3.a667f092.chunk.js.map": "/todo/react-hooks-version/static/js/3.a667f092.chunk.js.map",
+    "index.html": "/todo/react-hooks-version/index.html",
+    "static/css/main.380c8fa9.chunk.css.map": "/todo/react-hooks-version/static/css/main.380c8fa9.chunk.css.map",
+    "static/js/2.bc20b9e7.chunk.js.LICENSE.txt": "/todo/react-hooks-version/static/js/2.bc20b9e7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f73f8a2.js",
+    "static/js/2.bc20b9e7.chunk.js",
+    "static/css/main.380c8fa9.chunk.css",
+    "static/js/main.173009b3.chunk.js"
+  ]
+}

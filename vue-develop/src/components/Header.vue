@@ -11,6 +11,9 @@
         <li>
           <router-link to="vue" class="active">Vue</router-link>
         </li>
+        <li>
+          <a href="/todo/react-hooks-version/">React Hooks</a>
+        </li>
       </ul>
     </nav>
   </header>
