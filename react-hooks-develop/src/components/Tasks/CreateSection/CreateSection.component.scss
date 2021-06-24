@@ -2,8 +2,6 @@
 
 .create {
   margin-bottom: 20px;
-  display: flex;
-  flex-flow: row wrap;
 
   h2 {
     flex-basis: 100%;
@@ -13,6 +11,11 @@
       margin-left: 1em;
       font-size: 0.9rem;
     }
+  }
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
   }
 
   .addInput {
